@@ -1,0 +1,106 @@
+
+// colors //
+
+$background_clr: #FAFAFA;
+$primary_clr: #A055FF;
+$text_clr: #686868;
+
+$font: "Quicksand";
+
+$pure: #ffffff;
+$dark: #000000;
+
+
+$h_bold: #686868;
+$h_semi: #686868;
+$h_regular: #686868;
+
+$hover-color: rgba(0, 70, 223, 0.048);
+
+$shadow_1: 1rem 1rem 3rem 0rem rgba(0, 0, 0, 0.05);
+$shadow_2: 0rem -2rem 4rem rgba(0, 0, 0, 0.05);
+
+.color-pure {
+    color: $pure;
+}
+.color-dark {
+    color: #000000;
+}
+.color-background{
+    color: $background_clr;
+}
+.color-primary {
+    color: $primary_clr;
+}
+
+.color-text {
+    color: $text_clr;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
+}
+.shadow-1 {
+    box-shadow: $shadow_1;
+}
+.shadow-2 {
+    box-shadow: $shadow_2;
+}
+.btn-border {
+    border: 0.2rem solid $background_clr;
+}
+
+
+.h-16-regular {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+.h-16-semi {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.h-16-bold {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.h-20-regular {
+    font-family: "Quicksand", sans-serif;
+    font-size: 2.0rem;
+    font-weight:normal;
+}
+.h-20-semi {
+    font-family: "Quicksand", sans-serif;
+    font-size: 2.0rem;
+    font-weight: 400;
+}
+.h-20-bold {
+    font-family: "Quicksand", sans-serif;
+    font-size: 2.0rem;
+    font-weight: 700;
+}
+.h-36-regular {
+    font-family: "Quicksand", sans-serif;
+    font-size: 4.0rem;
+    font-weight:normal;
+}
+.h-36-semi {
+    font-family: "Quicksand", sans-serif;
+    font-size: 4.0rem;
+    font-weight: 400;
+}
+.h-36-bold {
+    font-family: "Quicksand", sans-serif;
+    font-size: 4.0rem;
+    font-weight: 700;
+}
