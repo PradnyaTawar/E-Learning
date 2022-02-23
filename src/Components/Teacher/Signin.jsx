@@ -1,26 +1,42 @@
-import React from 'react'
+import React from "react";
+import img2 from "../Assets/teacher.jpg";
 
 const Signin = () => {
   return (
     <div>
-        <div className="heading h-36-semi color-primary ">Sign In</div>
-        <div className="signin">
-            <div className="signin-img">
-            </div>
-          <div className="input-text-box">
-        <div className="input-text">
-            <label class="label-signin h-20-semi  "> Username</label>
-            <input type="text" className="text-box"></input>
-            </div>
-       
-        <div className="input-text">
-            <label class="label-signin h-20-semi "> Password</label>
-            <input type="text" className="text-box"></input>
+      <div className="heading h-36-semi color-primary ">Sign In</div>
+      <div className="signin">
+        <div className="signin-img">
+          <img className="img" alt="img" height="400" src={img2} />
         </div>
-        </div>
-        </div>
-        </div>
-  )
-}
+        <div className="sign-in-form">
+          <div className="input-div">
+            <label class="input-label h-20-semi  "> Username</label>
+            <input
+              type="text"
+              className="input-text-box color-primary h-20-bold "
+            ></input>
+          </div>
 
-export default Signin
+          <div className="input-div">
+            <label class="input-label h-20-semi  "> Password</label>
+            <input
+              type="text"
+              className="input-text-box  color-primary h-20-bold"
+            ></input>
+          </div>
+          <div className="signin-btn-div">
+            <button
+              type="button"
+              className="secondary-btn  color-pure   h-20-semi "
+            >
+              Sign in
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Signin;

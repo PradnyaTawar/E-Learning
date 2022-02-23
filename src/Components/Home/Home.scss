@@ -1,0 +1,33 @@
+.heading {
+  text-align: center;
+  margin: 4rem;
+}
+.heading-desc {
+  text-align: center;
+  justify-content: center;
+}
+.home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 40px;
+  justify-content: space-around;
+}
+
+.home-form {
+  width: 30%;
+  padding: 40px;
+  & .home-div {
+    padding: 2rem;
+  }
+}
+
+.home-form img {
+  margin-top: 5rem;
+  border-radius: 20px;
+}
+.home-footer {
+  background-color: #a055ff;
+  justify-content: space-between;
+  padding: 50px;
+}

@@ -1,0 +1,43 @@
+@import "./SCSS/variables";
+.navbar {
+  background-color: $primary_clr;
+  // width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  & .navbar-logo {
+    padding: 1rem;
+  }
+  & img {
+    padding-right: 1rem;
+  }
+  & .login-btn-div {
+    width: 15rem;
+  }
+}
+
+//signin
+.heading {
+  text-align: center;
+  margin: 4rem;
+}
+.signin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // padding: 40px;
+  justify-content: space-around;
+}
+
+.sign-in-form {
+  width: 30%;
+  // border: 2px solid;
+  & .input-div {
+    margin-bottom: 3rem;
+  }
+}
+
+.img {
+  border-radius: 20px;
+}

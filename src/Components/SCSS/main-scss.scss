@@ -1,12 +1,13 @@
-
 @import "../SCSS/comps";
 @import "../SCSS/variables";
-@import "./Navbar.scss";
 
-*{
- padding:0 ;
- margin:0 ;  
+* {
+  padding: 0;
+  margin: 0;
 }
 html {
-    font-size:  62.5%;
+  font-size: 62.5%;
+}
+a {
+  text-decoration: none;
 }

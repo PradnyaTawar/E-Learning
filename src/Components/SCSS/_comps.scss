@@ -1,46 +1,94 @@
 @import "../SCSS/variables";
 @import "../SCSS/mixin";
 
-
 .just-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .d-flex-ac {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+.just-center {
+  display: flex;
+  justify-content: center;
 }
 
 .primary-btn {
-    width: 100%;
-    height: 4rem;
-    background-color: $pure;
-    border-radius:20px;
-    // font-size: 1.6rem;
-    border: none;
+  width: 100%;
+  height: 4rem;
+  background-color: $pure;
+  border-radius: 20px;
+  // font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
 }
-.label-signin
-{
-color: #A055FF;
-width: 15rem;
-height: 4rem;
+.primary-btn:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
-.text-box{
-    width: 35rem;
-    height: 4rem;
-    border-radius: 20px;
-    border-color:#A055FF ;
-    
+.primary-btn:disabled {
+  cursor: not-allowed;
 }
-
-.heading{
-   align-items: center;
+.secondary-btn {
+  width: 100%;
+  height: 4rem;
+  background-color: $primary_clr;
+  border-radius: 1.5rem;
+  // font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
 }
 
-.signin{
-    display: flex;
-    align-items: center;
+.secondary-btn:hover {
+  filter: brightness(120%);
+}
+.secondary-btn:disabled {
+  background-color: $text_clr;
+  cursor: not-allowed;
+}
+.label-signin {
+  color: $primary_clr;
+  width: 15rem;
+  height: 4rem;
+}
+
+.input-label {
+  color: $primary_clr;
+}
+.text-box {
+  width: 35rem;
+  height: 4rem;
+  border-radius: 20px;
+  border-color: $primary_clr;
+}
+
+.heading {
+  align-items: center;
+}
+.tex-center {
+  text-align: center;
+}
+.tex-just {
+  text-align: justify;
+}
+
+.input-text-box {
+  padding: 1rem;
+  border-radius: 15px;
+  color: $primary_clr;
+  border: 2px solid $primary_clr;
+  outline: none;
+}
+.input-text-box:focus {
+  background-color: $text_box_clr;
+}
+.input-div {
+  // margin: 40px;
+  display: flex;
+  flex-direction: column;
+  & .input-text-box {
+    margin-top: 1.5rem;
+  }
 }
