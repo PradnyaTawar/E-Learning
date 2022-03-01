@@ -6,7 +6,17 @@
   justify-content: center;
   align-items: center;
 }
-
+.d-flex {
+  display: flex;
+}
+.d-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+}
 .d-flex-ac {
   display: flex;
   align-items: center;
@@ -38,9 +48,9 @@
   border-radius: 1.5rem;
   // font-size: 1.6rem;
   border: none;
+  
   cursor: pointer;
 }
-
 .secondary-btn:hover {
   filter: brightness(120%);
 }
@@ -67,10 +77,10 @@
 .heading {
   align-items: center;
 }
-.tex-center {
+.text-center {
   text-align: center;
 }
-.tex-just {
+.text-just {
   text-align: justify;
 }
 
@@ -91,4 +101,94 @@
   & .input-text-box {
     margin-top: 1.5rem;
   }
+}
+.input-div2 {
+  // border: 2px solid $primary_clr;
+  width: 100%;
+  height: 100%;
+  margin: 3px;
+  align-items: center;
+  padding: 2rem;
+  justify-content: space-between;
+  display: flex;
+  // flex-direction: row;
+  & .input-text-box2 {
+    width: 50%;
+    height: 50%;
+
+    // margin-left: 25rem;
+  }
+  & .input-label2 {
+    width: 100wh;
+    // height:50%;
+    padding: 2rem;
+    display: inline-flex;
+  }
+}
+.input-text-box2 {
+  padding: 1rem;
+  border-radius: 15px;
+  color: $primary_clr;
+  border: 2px solid $primary_clr;
+  outline: none;
+}
+.input-text-box2:focus {
+  background-color: $text_box_clr;
+}
+.input-text-box-white {
+  margin: 3rem;
+  padding: 1rem;
+  border-radius: 25px;
+  color: $primary_clr;
+  background-color: $text_box_clr;
+  outline: none;
+}
+
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  & .student-list-card {
+    margin: 3rem;
+    padding: 1rem;
+    height: fit-content;
+    width: 20vw;
+    border-radius: 15px;
+    color: $background_clr;
+    background-color: $background_clr;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(150, 147, 147, 0.2),
+      0 6px 20px 0 rgba(161, 159, 159, 0.19);
+    transition: 0.3s;
+  }
+  .student-list-card:hover {
+    // filter: brightness(120%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .students-list-btn {
+    width: 10rem;
+    height: 4rem;
+    background-color: $primary_clr;
+    border-radius: 1.5rem;
+    // font-size: 1.6rem;
+    padding-left: 10px;
+    margin-top: 2rem;
+    border: none;
+    cursor: pointer;
+  }
+  .students-list-btn:disabled {
+    background-color: $text_clr;
+    cursor: not-allowed;
+  }
+  .student-list-box {
+    padding: 20px;
+    // margin: 3rem;
+  }
+}
+
+.line{
+  background-color: $primary_clr;
+  // border: 2px solid;
+  height: 2px;
+  width:100%;
 }

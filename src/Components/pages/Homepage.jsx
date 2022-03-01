@@ -1,14 +1,14 @@
-/* eslint-disable react/jsx-no-undef */
-import React from "react";
+import React from 'react'
+import Navbar from "../Navbar.jsx"
+import Home from "../Home/Home.jsx"
 
-import Navbar from './Components/Home/Navbar'
-import Home from './Components/Home/Home'
-
-function Homepage () {
-    return(<>
-<Navbar/>
-<Home/>
-    </>)
+const Homepage = () => {
+  return (
+    <div>
+      <Navbar/>
+      <Home />
+    </div>
+  )
 }
 
-export default Homepage;
+export default Homepage

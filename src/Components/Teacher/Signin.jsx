@@ -1,9 +1,11 @@
 import React from "react";
 import img2 from "../Assets/teacher.jpg";
+import Navbar from '../Navbar';
 
 const Signin = () => {
   return (
     <div>
+      <Navbar/>
       <div className="heading h-36-semi color-primary ">Sign In</div>
       <div className="signin">
         <div className="signin-img">
