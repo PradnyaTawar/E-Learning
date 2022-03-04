@@ -1,13 +1,11 @@
 import React from 'react'
-import TeacherSidebar from './TeacherSidebar'
 import Titlecontainer from "../Containers/title-container.jsx"
-import img2 from "../Assets/class1.jpg";
+import img2 from "../Assets/image 1.svg";
 
-const TeacherProfile = () => {
+const Studentprofile = () => {
   return (
     <div>
-      
-       <Titlecontainer title="Teacher Details"/>
+       <Titlecontainer title="Student Details"/>
        <div className="signin">
         <div className="signin-img">
           <img className="img" alt="img" height="500" width="500" src={img2} />
@@ -40,4 +38,4 @@ const TeacherProfile = () => {
   )
 }
 
-export default TeacherProfile
+export default Studentprofile

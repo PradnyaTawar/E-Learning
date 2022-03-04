@@ -1,12 +1,12 @@
 import React from "react";
 
-export default function Profillogo({ color }) {
+export default function Arrow({ color }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-user"
-      width="110"
-      height="104"
+      class="icon icon-tabler icon-tabler-arrow-narrow-right"
+      width="44"
+      height="44"
       viewBox="0 0 24 24"
       stroke-width="1.5"
       stroke={color?color:"white"}
@@ -15,8 +15,9 @@ export default function Profillogo({ color }) {
       stroke-linejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <circle cx="12" cy="7" r="4" />
-      <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <line x1="15" y1="16" x2="19" y2="12" />
+      <line x1="15" y1="8" x2="19" y2="12" />
     </svg>
   );
 }

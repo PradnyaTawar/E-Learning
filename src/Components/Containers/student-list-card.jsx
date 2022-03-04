@@ -12,10 +12,10 @@ const Studentlistcard= ({name,surname})=>{
           <div className="student-list-box color-primary h-16-semi ">
             <h2>{name}</h2>
             <h3> {surname}</h3>
-            <h3> Name</h3>
+            <h3> {name}</h3>
             <div className="students-list-btn d-flex-ac   ">
           <ListLogo color="#fefdff" />
-          <h2 className="color-background h-16-bold">View</h2>
+          <h2 className="color-background h-16-bold"> <a className="color-pure"href="/viewstudent">View</a></h2>
         </div>
           </div>
           

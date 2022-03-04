@@ -52,8 +52,10 @@
   cursor: pointer;
 }
 .secondary-btn:hover {
-  filter: brightness(120%);
-}
+  filter: drop-shadow(10px 10px 10px #7b7bdb);}
+// .secondary-btn:hover {
+//   filter: brightness(120%);
+// }
 .secondary-btn:disabled {
   background-color: $text_clr;
   cursor: not-allowed;
@@ -146,7 +148,7 @@
 
 .student-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   & .student-list-card {
     margin: 3rem;
@@ -175,6 +177,7 @@
     margin-top: 2rem;
     border: none;
     cursor: pointer;
+    
   }
   .students-list-btn:disabled {
     background-color: $text_clr;
@@ -192,3 +195,41 @@
   height: 2px;
   width:100%;
 }
+.line2{
+  background-color: rgb(235, 224, 224);
+  // border: 2px solid;
+  height: 1px;
+  width:100%;
+}
+
+.teacher-dashboard{
+  display: flex;
+  // width: 100%;
+  .leftbar{
+    width: 20%;
+  }
+  .rightbar{
+    width: 80%;
+  }
+}
+
+.padding-right{
+  padding-right: 2rem;
+}
+.padding-left{
+  padding-left: 2rem;
+}
+.padding-top{
+  padding-top: 2rem;
+}
+.padding-botton{
+  padding-bottom: 2rem;
+}
+
+.padding{
+  padding: 2rem;
+}
+
+
+
+

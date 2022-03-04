@@ -19,18 +19,24 @@ const Studentslist = () => {
           <div className="student-list-box color-primary h-16-semi ">
             <h2>Name</h2>
             <h3> Name</h3>
-            <h3> Name</h3>
             <div className="students-list-btn d-flex-ac   ">
           <ListLogo color="#fefdff" />
-          <h2 className="color-background h-16-bold">View</h2>
+          <h2 className="color-background h-16-bold"><a className="color-pure"href="/viewstudent">View</a></h2>
         </div>
           </div>
           
         </div>
        
       </div>
-     <Studentlistcard name="Pradnya"  surname="Tawar" />
-     <Studentlistcard  surname="Tawar"/>
+     <Studentlistcard name="Pradnya "/>
+     <Studentlistcard name="Pradnya "  />
+     <Studentlistcard name="Pradnya "/>
+     <Studentlistcard name="Pradnya "  />
+     <Studentlistcard name="Pradnya "/>
+     <Studentlistcard name="Pradnya "  />
+     <Studentlistcard name="Pradnya "/>
+     <Studentlistcard name="Pradnya "  />
+     
       </div>
     </div>
   );

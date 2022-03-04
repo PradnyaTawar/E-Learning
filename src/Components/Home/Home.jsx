@@ -11,7 +11,7 @@ const Home = () => {
             <div class=" h-36-bold"> Grow your skills.</div>
           </div>
           <div className="home-div">
-            <div class=" just-center   h-20-semi  ">
+            <div class=" just-center  color-text h-20-semi  ">
               {" "}
               Learn in-demand skills with over 16,000+ online courses taught by
               real-world professionals.
@@ -20,7 +20,7 @@ const Home = () => {
           <div className="signin-btn-div">
             <button
               type="button"
-              className="secondary-btn  color-pure   h-20-semi "
+              className="secondary-btn  color-pure  h-20-semi "
             >
               <a className="color-pure" href="/signup">
                 Start Your Free Coures
@@ -34,11 +34,11 @@ const Home = () => {
       </div>
 
       <div className="home-content-1" style={{ padding: "0 40px" }}>
-        <div className="heading h-36-semi color-text ">
+        <div className="heading h-36-bold color-text">
           Why You Need E-Lerning?
         </div>
         <div className="heading-desc color-text ">
-          <p className="tex-just h-20-semi">
+          <p className="text-just h-20-semi">
             Today most organizations need an automated learning process to train
             their employee as it the most convenient way. Corporate LMS systems
             allow you to deliver hassle-free online training to your employees,

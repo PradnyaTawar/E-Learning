@@ -1,6 +1,6 @@
 import React from "react";
 import img2 from "../Assets/landing-page.jpg";
-import Navbar from '../Navbar';
+import Navbar from "../Navbar";
 
 const Signup = () => {
   return (
@@ -53,8 +53,12 @@ const Signup = () => {
               type="button"
               className="secondary-btn  color-pure   h-20-semi "
             >
-              Sign up
+             <a className="color-pure" href="/studentlandingpage ">Sign up</a>
             </button>
+          </div>
+          <div className="heading h-20-semi color-primary ">
+            {" "}
+            Already User, Lets <a href="/signin">Sign In</a> !
           </div>
         </div>
       </div>

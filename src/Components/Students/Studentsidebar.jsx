@@ -1,7 +1,5 @@
 import React from "react";
-import "./Teacher.scss";
 import { Link } from "react-router-dom";
-// import TeacherProfile from "../Teacher/TeacherProfile"
 import img2 from "../Assets/Frame.svg";
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
@@ -9,40 +7,34 @@ import ProfileLogo from "../Assets/jsx_svg/profile-logo";
 import Profillogo from "../Assets/jsx_svg/profilelogo";
 import CreateLogo from "../Assets/jsx_svg/create-course";
 import ListLogo from "../Assets/jsx_svg/list-logo";
-import AddedcourseLogo from "../Assets/jsx_svg/addedcourse-logo";
-import TeacherProfile from "./TeacherProfile";
-import Createcourse from "./Createcourse";
-import { Outlet } from "react-router-dom";
+import TeacherProfile from "../Teacher/TeacherProfile";
+import Studentprofile from "./Studentprofile";
+import Notes from "./Notes";
+import Courses from "./Courses";
+import "./Student.scss";
 
-const teasidebarNavItems = [
+const stusidebarNavItems = [
   {
     display: "Profile",
     icon: <ProfileLogo color="#fff"  />,
-    to: "/teacherprofile",
+    to: "/studentprofile",
     section: "studentprofile",
   },
   {
-    display: "Create Course",
-    icon: <CreateLogo  color="#fff" />,
-    to: "/create",
-    section: "",
-  },
-  
-  {
-    display: " Added Courses",
-    icon:  <AddedcourseLogo color="#fff" />,
-    to: "/addedcourses",
+    display: "Courses",
+    icon: <ListLogo color="#fff" />,
+    to: "/courses",
     section: "",
   },
   {
-    display: " Students List",
-    icon:  < ListLogo color="#fff" />,
-    to: "/studentslist",
+    display: " Notes",
+    icon:  <CreateLogo color="#fff" />,
+    to: "/createnotes",
     section: "",
   },
 ];
 
-const TeacherSidebar = () => {
+const Studentsidebar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [stepHeight, setStepHeight] = useState(0);
   const sidebarRef = useRef();
@@ -62,7 +54,7 @@ const TeacherSidebar = () => {
   // change active index
   useEffect(() => {
     const curPath = window.location.pathname.split("/")[1];
-    const activeItem = teasidebarNavItems.findIndex(
+    const activeItem = stusidebarNavItems.findIndex(
       (item) => item.section === curPath
     );
     setActiveIndex(curPath.length === 0 ? 0 : activeItem);
@@ -92,7 +84,7 @@ const TeacherSidebar = () => {
             }px)`,
           }}
         ></div>
-        {teasidebarNavItems.map((item, index) => (
+        {stusidebarNavItems.map((item, index) => (
           <Link to={item.to} key={index}>
             <div
               className={`sidebar__menu__item ${
@@ -110,11 +102,9 @@ const TeacherSidebar = () => {
           <a className="color-primary" href="/home">Logout</a>
         </button>
       </div>
-      <div className="right-sidebar">
-        <TeacherProfile/>
-      </div>
+     
     </div>
   );
 };
 
-export default TeacherSidebar;
+export default Studentsidebar;
