@@ -1,8 +1,11 @@
 import React from 'react'
+import Studentprofile from "./Components/Students/Studentprofile";
 
 const StudentDashboard = () => {
   return (
-    <div>StudentDashboard</div>
+    <div>
+    <Studentprofile/>
+    </div>
   )
 }
 

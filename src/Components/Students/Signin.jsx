@@ -32,7 +32,9 @@ const Signin = () => {
               type="button"
               className="secondary-btn  color-pure   h-20-semi "
             >
-             <a className="color-pure" href="/studentlandingpage ">Sign in</a>
+              <a className="color-pure" href="/studentlandingpage ">
+                Sign in
+              </a>
             </button>
           </div>
           <div className="heading h-20-semi color-primary ">

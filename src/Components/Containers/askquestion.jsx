@@ -21,7 +21,6 @@ const Askquestion = () => {
       <div className="input-text-box-white input-div h-20-semi color-primary  ">
         <div className="input-div input-text-box ">
           <h4>Q.1 When will I have access to the lectures and assignments ?</h4>
-         
         </div>
       </div>
     </div>

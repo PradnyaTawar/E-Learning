@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="navbar-logo d-flex-ac  ">
           <img className="img" alt="img" width="30" src={img2} />
           <h1 className="color-pure h-20-bold">
-            <a className="color-pure" href="/home">
+            <a className="color-pure" href="/">
               E-Learning
             </a>
           </h1>
@@ -20,7 +20,9 @@ const Navbar = () => {
             type="button"
             className="primary-btn color-primary h-20-semi "
           >
-            <a className="color-primary h-20-bold" href="/signin">Sign in</a>
+            <a className="color-primary h-20-bold" href="/signin">
+              Sign in
+            </a>
           </button>
         </div>
       </div>

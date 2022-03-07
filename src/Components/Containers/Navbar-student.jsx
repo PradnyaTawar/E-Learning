@@ -16,7 +16,7 @@ const Navbar = () => {
         </div>
         <div className="d-flex-ac ">
           <h1 className="color-pure h-20-bold padding-right">
-            <a className="color-pure" href="/teacherdashboard">
+            <a className="color-pure" href="/studentdashboard">
               Profile
             </a>
           </h1>
@@ -25,7 +25,9 @@ const Navbar = () => {
               type="button"
               className="primary-btn color-primary h-20-semi "
             >
-              <a className="color-primary h-20-bold" href="/home">Logout</a>
+              <a className="color-primary h-20-bold" href="/">
+                Logout
+              </a>
             </button>
           </div>
         </div>

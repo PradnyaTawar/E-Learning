@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../Containers/Navbar-student.jsx";
-import img2 from "../Assets/class.jpg";
+import img2 from "../Assets/teacher.jpg";
 import StudentCourses from "../Containers/Student-courses.jsx";
 import Courselistcard from "../Containers/course-list.jsx";
 import NavbarTeacher from "../Containers/Navbar-teacher.jsx";

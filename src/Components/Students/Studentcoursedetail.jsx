@@ -41,7 +41,7 @@ const Studentcoursedetail = () => {
           <span className=" d-flex-ac h-20-semi color-primary">
             {/* <img className="img2" alt="img" width="40" src={img2} />{" "} */}
             <ProfileLogo color="#a055ff" />
-           Modules: 4
+            Modules: 4
           </span>
           <span className=" d-flex-ac h-20-semi color-primary">
             {/* <img className="img2" alt="img" width="40" src={img2} />{" "} */}
@@ -51,7 +51,7 @@ const Studentcoursedetail = () => {
           <span className=" d-flex-ac h-20-semi color-primary">
             {/* <img className="img2" alt="img" width="40" src={img2} />{" "} */}
             <Biggner color="#a055ff" />
-          Beginner
+            Beginner
           </span>
         </div>
         <div className="signin-img">
@@ -67,12 +67,12 @@ const Studentcoursedetail = () => {
           <span className=" d-flex-ac h-20-semi color-primary">
             {/* <img className="img2" alt="img" width="40" src={img2} />{" "} */}
             <Arrow color="#a055ff" />
-          Easy-to-implement tips
+            Easy-to-implement tips
           </span>
           <span className=" d-flex-ac h-20-semi color-primary ">
             {/* <img className="img2" alt="img" width="40" src={img2} />{" "} */}
             <Arrow color="#a055ff" />
-           End of topic assessments
+            End of topic assessments
           </span>
         </div>
         <div className="signin-img">
@@ -88,12 +88,12 @@ const Studentcoursedetail = () => {
           <span className=" d-flex-ac h-20-semi color-primary">
             {/* <img className="img2" alt="img" width="40" src={img2} />{" "} */}
             <Homework color="#a055ff" />
-           Create Notes
+            Create Notes
           </span>
           <span className=" d-flex-ac h-20-semi color-primary">
             {/* <img className="img2" alt="img" width="40" src={img2} />{" "} */}
             <Homework color="#a055ff" />
-           Self Learning
+            Self Learning
           </span>
         </div>
       </div>
@@ -132,15 +132,12 @@ const Studentcoursedetail = () => {
       <Homeworkcontainer />
       <Homeworkcontainer />
       <div className="create-btn-div padding">
-            <button
-              type="button"
-              className="secondary-btn  color-pure  h-20-semi "
-            >
-              <a className="color-pure" href="/studentlandingpage">
-                End Your Course
-              </a>
-            </button>
-          </div>
+        <button type="button" className="secondary-btn  color-pure  h-20-semi ">
+          <a className="color-pure" href="/studentlandingpage">
+            End Your Course
+          </a>
+        </button>
+      </div>
     </div>
   );
 };

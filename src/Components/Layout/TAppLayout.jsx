@@ -6,7 +6,6 @@ const TAppLayout = () => {
     return <div style={{
         padding: '5px 0px 0px 320px'
     }}>
-        {/* <Studentsidebar /> */}
        <TeacherSidebar/>
         <Outlet />
     </div>;

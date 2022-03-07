@@ -38,7 +38,6 @@ const Createcourse = () => {
             ></input>
           </div>
         </div>
-      
       </div>
       <div className="create-btn-div">
         <button

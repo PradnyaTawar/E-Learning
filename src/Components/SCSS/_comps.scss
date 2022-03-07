@@ -48,11 +48,12 @@
   border-radius: 1.5rem;
   // font-size: 1.6rem;
   border: none;
-  
+
   cursor: pointer;
 }
 .secondary-btn:hover {
-  filter: drop-shadow(10px 10px 10px #7b7bdb);}
+  filter: drop-shadow(10px 10px 10px #7b7bdb);
+}
 // .secondary-btn:hover {
 //   filter: brightness(120%);
 // }
@@ -177,7 +178,6 @@
     margin-top: 2rem;
     border: none;
     cursor: pointer;
-    
   }
   .students-list-btn:disabled {
     background-color: $text_clr;
@@ -189,47 +189,48 @@
   }
 }
 
-.line{
+.line {
   background-color: $primary_clr;
   // border: 2px solid;
   height: 2px;
-  width:100%;
+  width: 100%;
 }
-.line2{
+.line2 {
   background-color: rgb(235, 224, 224);
   // border: 2px solid;
   height: 1px;
-  width:100%;
+  width: 100%;
 }
 
-.teacher-dashboard{
+.teacher-dashboard {
   display: flex;
   // width: 100%;
-  .leftbar{
+  .leftbar {
     width: 20%;
   }
-  .rightbar{
+  .rightbar {
     width: 80%;
   }
 }
 
-.padding-right{
+.padding-right {
   padding-right: 2rem;
 }
-.padding-left{
+.padding-left {
   padding-left: 2rem;
 }
-.padding-top{
+.padding-top {
   padding-top: 2rem;
 }
-.padding-botton{
+.padding-botton {
   padding-bottom: 2rem;
 }
 
-.padding{
+.padding {
   padding: 2rem;
 }
 
-
-
-
+.right-sidebar {
+  width: 100%;
+  height: 50%;
+}

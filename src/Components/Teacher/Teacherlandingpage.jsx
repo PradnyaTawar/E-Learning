@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 import Navbar from "../Containers/Navbar-student.jsx";
 import img2 from "../Assets/class.jpg";
-import StudentCourses from '../Containers/Student-courses.jsx';
+import StudentCourses from "../Containers/Student-courses.jsx";
 
 const Teacherlandingpage = () => {
   return (
     <div>
-        <Navbar/>
-        <div className="home">
+      <Navbar />
+      <div className="home">
         <div className="home-form">
           <div className="home-div">
             <div class=" h-36-bold"> Grow your skills.</div>
@@ -57,11 +57,13 @@ const Teacherlandingpage = () => {
         </div>
       </div>
       <div className="student-list">
-    <StudentCourses/><StudentCourses/><StudentCourses/>
-    <StudentCourses/> <StudentCourses/> <StudentCourses/>
+        <StudentCourses />
+        <StudentCourses />
+        <StudentCourses />
+        <StudentCourses /> <StudentCourses /> <StudentCourses />
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Teacherlandingpage
+export default Teacherlandingpage;

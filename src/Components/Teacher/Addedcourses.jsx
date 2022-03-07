@@ -12,8 +12,8 @@ const Addedcourses = () => {
         <Courselistcard name="Pradnya" surname="Tawar" />{" "}
         <Courselistcard name="Pradnya" surname="Tawar" />{" "}
         <Courselistcard name="Pradnya" surname="Tawar" />
-        <Courselistcard name="Pradnya"  surname="Tawar" />
-        <Courselistcard name="Pradnya"  surname="Tawar" />
+        <Courselistcard name="Pradnya" surname="Tawar" />
+        <Courselistcard name="Pradnya" surname="Tawar" />
       </div>
     </div>
   );

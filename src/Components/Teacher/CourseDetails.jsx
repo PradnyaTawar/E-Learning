@@ -134,9 +134,9 @@ const CourseDetails = () => {
           </div>
         </div>
       </div>
-     <Askquestion/>
+      <Askquestion />
       <div className="create-btn-div padding">
-        <button type="button" className="secondary-btn  color-pure  h-20-semi ">
+        <button type="button"  disabled className="secondary-btn  color-pure  h-20-semi ">
           <a className="color-pure" href="/studentcoursedetails">
             Start Your Free Coures
           </a>

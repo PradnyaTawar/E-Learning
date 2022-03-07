@@ -17,26 +17,26 @@ import { Outlet } from "react-router-dom";
 const teasidebarNavItems = [
   {
     display: "Profile",
-    icon: <ProfileLogo color="#fff"  />,
+    icon: <ProfileLogo color="#fff" />,
     to: "/teacherprofile",
     section: "studentprofile",
   },
   {
     display: "Create Course",
-    icon: <CreateLogo  color="#fff" />,
+    icon: <CreateLogo color="#fff" />,
     to: "/create",
     section: "",
   },
-  
+
   {
     display: " Added Courses",
-    icon:  <AddedcourseLogo color="#fff" />,
+    icon: <AddedcourseLogo color="#fff" />,
     to: "/addedcourses",
     section: "",
   },
   {
     display: " Students List",
-    icon:  < ListLogo color="#fff" />,
+    icon: <ListLogo color="#fff" />,
     to: "/studentslist",
     section: "",
   },
@@ -79,9 +79,9 @@ const TeacherSidebar = () => {
         </h1>
       </div>
       <div className="just-center ">
-          {" "}
-          <Profillogo color="#f2f0f5" />
-        </div>
+        {" "}
+        <Profillogo color="#f2f0f5" />
+      </div>
       <div ref={sidebarRef} className="sidebar-links">
         <div
           ref={indicatorRef}
@@ -107,11 +107,13 @@ const TeacherSidebar = () => {
       </div>
       <div className="logout-btn-div2 just-center ">
         <button type="button" className="primary-btn color-primary h-20-semi ">
-          <a className="color-primary" href="/home">Logout</a>
+          <a className="color-primary" href="/">
+            Logout
+          </a>
         </button>
       </div>
       <div className="right-sidebar">
-        <TeacherProfile/>
+        <TeacherProfile />
       </div>
     </div>
   );

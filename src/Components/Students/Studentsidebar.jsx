@@ -16,7 +16,7 @@ import "./Student.scss";
 const stusidebarNavItems = [
   {
     display: "Profile",
-    icon: <ProfileLogo color="#fff"  />,
+    icon: <ProfileLogo color="#fff" />,
     to: "/studentprofile",
     section: "studentprofile",
   },
@@ -28,7 +28,7 @@ const stusidebarNavItems = [
   },
   {
     display: " Notes",
-    icon:  <CreateLogo color="#fff" />,
+    icon: <CreateLogo color="#fff" />,
     to: "/createnotes",
     section: "",
   },
@@ -61,6 +61,7 @@ const Studentsidebar = () => {
   }, [location]);
 
   return (
+    <>
     <div className="sidebar">
       <div className="sidebar-logo d-flex-ac just-center padding ">
         <img className="img" alt="img" width="30" src={img2} />
@@ -71,9 +72,9 @@ const Studentsidebar = () => {
         </h1>
       </div>
       <div className="just-center ">
-          {" "}
-          <Profillogo color="#f2f0f5" />
-        </div>
+        {" "}
+        <Profillogo color="#f2f0f5" />
+      </div>
       <div ref={sidebarRef} className="sidebar-links">
         <div
           ref={indicatorRef}
@@ -99,11 +100,15 @@ const Studentsidebar = () => {
       </div>
       <div className="logout-btn-div2 just-center ">
         <button type="button" className="primary-btn color-primary h-20-semi ">
-          <a className="color-primary" href="/home">Logout</a>
+          <a className="color-primary" href="/">
+            Logout
+          </a>
         </button>
       </div>
-     
     </div>
+
+ 
+    </>
   );
 };
 

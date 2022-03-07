@@ -1,10 +1,12 @@
 import React from "react";
 import img2 from "../Assets/class.jpg";
 import "./Home.scss";
+import Navbar from "../Navbar";
 
 const Home = () => {
   return (
     <div>
+
       <div className="home">
         <div className="home-form">
           <div className="home-div">
