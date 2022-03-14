@@ -2,11 +2,12 @@ import React from "react";
 import img2 from "../Assets/class.jpg";
 import "./Home.scss";
 import Navbar from "../Navbar";
+import img3 from "../Assets/Frame.svg";
+import Footercontainer from "../Containers/footer.jsx"
 
 const Home = () => {
   return (
     <div>
-
       <div className="home">
         <div className="home-form">
           <div className="home-div">
@@ -57,7 +58,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="home-content-2">
+      <div className="home-content-2 input-text-box-white">
         <div className="home">
           <div className="home-form">
             <div className="home-div">
@@ -97,17 +98,16 @@ const Home = () => {
           </div>
           <div className="home-form">
             <div className="home-div">
-              <div class=" h-20-bold">It saves time and cost</div>
+              <div class=" h-20-bold">Digital Learning Solutions</div>
             </div>
             <div className="home-div">
               <div class=" just-center   h-20-semi  ">
                 {" "}
-                Companies are investing a tremendous amount of money in
-                conducting training programs for their employees. With the use
-                of a corporate LMS, you can save a tremendous amount of your L&D
-                budget. It improves the training effectiveness and reduces the
-                cost, which results in better ROI. It increases the
-                profitability and productivity of your organization.
+                LHT creates custom, digital learning solutions that are
+                personalized to your business challenges. We work with you to
+                discover your true learning needs. Then our unique design-pods
+                create training solutions to engage your audience and drive
+                neural connections.
               </div>
             </div>
             <div className="signin-btn-div">
@@ -123,21 +123,19 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="home-content-2">
+      <div className="home-content-2 input-text-box-white">
         <div className="home">
           <div className="home-form">
-            <div className="home-div">
-              <div class=" h-20-bold">It saves time and cost</div>
+            <div className="home-div ">
+              <div class=" h-20-bold">Custom Online Training and Elearning</div>
             </div>
             <div className="home-div">
               <div class=" just-center   h-20-semi  ">
                 {" "}
-                Companies are investing a tremendous amount of money in
-                conducting training programs for their employees. With the use
-                of a corporate LMS, you can save a tremendous amount of your L&D
-                budget. It improves the training effectiveness and reduces the
-                cost, which results in better ROI. It increases the
-                profitability and productivity of your organization.
+                Innovative learning experiences designed to drive behavior
+                change to be dispersed when and where they need it. Several
+                levels of custom training are available on your unique business
+                needs.
               </div>
             </div>
             <div className="signin-btn-div">
@@ -156,28 +154,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="home-footer just-center ">
-        <div className="footer color-background h-20-bold ">
-          <h2 className="color-dark">footer</h2>
-          <p>footer</p>
-          <p>footer</p>
-        </div>
-        <div className="footer color-background h-20-bold">
-          <h2 className="color-dark">footer</h2>
-          <p>footer</p>
-          <p>footer</p>
-        </div>
-        <div className="footer color-background h-20-bold">
-          <h2 className="color-dark">footer</h2>
-          <p>footer</p>
-          <p>footer</p>
-        </div>
-        <div className="footer color-background h-20-bold">
-          <h2 className="color-dark">footer</h2>
-          <p>footer</p>
-          <p>footer</p>
-        </div>
-      </div>
+     < Footercontainer />
     </div>
   );
 };

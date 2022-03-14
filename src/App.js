@@ -41,6 +41,7 @@ const App = () => {
             />
             <Route path="/courses" index element={<Courses />} />
             <Route exact path="/createnotes" element={<Notes />} />
+            <Route exact path="/coursedetails" element={<CourseDetails />} />
             <Route
               exact
               path="/studentcoursedetails"
@@ -57,7 +58,12 @@ const App = () => {
             <Route exact path="/create" element={<Createcourse />} />
             <Route exact path="/studentslist" element={<Studentslist />} />
             <Route exact path="/addedcourses" element={<Addedcourses />} />
-            <Route exact path="/coursedetails" element={<CourseDetails />} />
+            <Route exact path="/studentcoursedetail" element={<CourseDetails />} />
+            {/* <Route
+              exact
+              path="/studentcoursedetails"
+              element={<Studentcoursedetail />}
+            /> */}
             <Route exact path="/viewstudent" element={<Viewstudent />} />
           </Route>
           <Route exact path="/teacherdashboard" element={<TeacherSidebar />} />
@@ -66,7 +72,7 @@ const App = () => {
             path="/teacherlandingpage"
             element={<Teacherlandingpage />}
           />
-
+  <Route exact path="/coursedetail" element={<CourseDetails />}></Route>
           <Route
             exact
             path="/studentlandingpage"

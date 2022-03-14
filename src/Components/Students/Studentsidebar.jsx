@@ -62,52 +62,53 @@ const Studentsidebar = () => {
 
   return (
     <>
-    <div className="sidebar">
-      <div className="sidebar-logo d-flex-ac just-center padding ">
-        <img className="img" alt="img" width="30" src={img2} />
-        <h1 className="color-pure  just-center h-20-bold">
-          <a className="color-pure just-center" href="/teacherlandingpage">
-            E-Learning
-          </a>
-        </h1>
+      <div className="sidebar">
+        <div className="sidebar-logo d-flex-ac just-center padding ">
+          <img className="img" alt="img" width="30" src={img2} />
+          <h1 className="color-pure  just-center h-20-bold">
+            <a className="color-pure just-center" href="/teacherlandingpage">
+              E-Learning
+            </a>
+          </h1>
+        </div>
+        <div className="just-center ">
+          {" "}
+          <Profillogo color="#f2f0f5" />
+        </div>
+        <div ref={sidebarRef} className="sidebar-links">
+          <div
+            ref={indicatorRef}
+            className="sidebar-links__indicator"
+            style={{
+              transform: `translateX(-50%) translateY(${
+                activeIndex * stepHeight
+              }px)`,
+            }}
+          ></div>
+          {stusidebarNavItems.map((item, index) => (
+            <Link to={item.to} key={index}>
+              <div
+                className={`sidebar__menu__item ${
+                  activeIndex === index ? "active" : ""
+                }`}
+              >
+                <div className="sidebar__menu__item__icon">{item.icon}</div>
+                <div className="sidebar__menu__item__text">{item.display}</div>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <div className="logout-btn-div2 just-center ">
+          <button
+            type="button"
+            className="primary-btn color-primary h-20-semi "
+          >
+            <a className="color-primary" href="/">
+              Logout
+            </a>
+          </button>
+        </div>
       </div>
-      <div className="just-center ">
-        {" "}
-        <Profillogo color="#f2f0f5" />
-      </div>
-      <div ref={sidebarRef} className="sidebar-links">
-        <div
-          ref={indicatorRef}
-          className="sidebar-links__indicator"
-          style={{
-            transform: `translateX(-50%) translateY(${
-              activeIndex * stepHeight
-            }px)`,
-          }}
-        ></div>
-        {stusidebarNavItems.map((item, index) => (
-          <Link to={item.to} key={index}>
-            <div
-              className={`sidebar__menu__item ${
-                activeIndex === index ? "active" : ""
-              }`}
-            >
-              <div className="sidebar__menu__item__icon">{item.icon}</div>
-              <div className="sidebar__menu__item__text">{item.display}</div>
-            </div>
-          </Link>
-        ))}
-      </div>
-      <div className="logout-btn-div2 just-center ">
-        <button type="button" className="primary-btn color-primary h-20-semi ">
-          <a className="color-primary" href="/">
-            Logout
-          </a>
-        </button>
-      </div>
-    </div>
-
- 
     </>
   );
 };

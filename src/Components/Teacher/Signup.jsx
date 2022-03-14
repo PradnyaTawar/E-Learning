@@ -53,7 +53,9 @@ const Signup = () => {
               type="button"
               className="secondary-btn  color-pure   h-20-semi "
             >
-             <a className="color-pure" href="/studentlandingpage ">Sign up</a>
+              <a className="color-pure" href="/studentlandingpage ">
+                Sign up
+              </a>
             </button>
           </div>
           <div className="heading h-20-semi color-primary ">

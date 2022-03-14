@@ -8,12 +8,8 @@ const Addedcourses = () => {
     <div>
       <Titlecontainer title="Added Courses" />
       <div className="student-list">
-        <Courselistcard name="Pradnya" surname="Tawar" />
-        <Courselistcard name="Pradnya" surname="Tawar" />{" "}
-        <Courselistcard name="Pradnya" surname="Tawar" />{" "}
-        <Courselistcard name="Pradnya" surname="Tawar" />
-        <Courselistcard name="Pradnya" surname="Tawar" />
-        <Courselistcard name="Pradnya" surname="Tawar" />
+        <Courselistcard />
+        <Courselistcard />
       </div>
     </div>
   );

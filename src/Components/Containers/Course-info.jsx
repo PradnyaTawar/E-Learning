@@ -1,8 +1,9 @@
 import React from "react";
 import ListLogo from "../Assets/jsx_svg/list-logo";
 import Profillogo from "../Assets/jsx_svg/profilelogo";
+import img2 from "../Assets/landing-page.jpg";
 
-const Courselistcard = ({ name }) => {
+const Coursesinfo = ({ name }) => {
   return (
     <div className="student-list-card just-center  ">
       <div className="just-center ">
@@ -11,14 +12,20 @@ const Courselistcard = ({ name }) => {
           <h2>Title</h2>
           <div className="line"></div>
           <span className="just-center ">
-            {" "}
-            <Profillogo color="#a055ff" />
+            {/* <Profillogo color="#a055ff" /> */}
+            <img
+              className="img"
+              alt="img"
+              height="130"
+              width="180"
+              src={img2}
+            />
           </span>
           <div className="student-list-inner-box"></div>
           <div className="create-list-btn d-flex-ac just-center  ">
             <ListLogo color="#fefdff" />
-            <h2 className="color-background h-20-regular">
-              <a className="color-pure" href="/studentcoursedetail">
+            <h2 className="color-background h-20-bold">
+              <a className="color-pure" href="/courseinfo">
                 View
               </a>
             </h2>
@@ -28,4 +35,4 @@ const Courselistcard = ({ name }) => {
     </div>
   );
 };
-export default Courselistcard;
+export default Coursesinfo;

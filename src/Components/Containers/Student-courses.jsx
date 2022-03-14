@@ -25,7 +25,7 @@ const StudentCourses = ({ name }) => {
           <div className="create-list-btn d-flex-ac just-center  ">
             <ListLogo color="#fefdff" />
             <h2 className="color-background h-20-bold">
-              <a className="color-pure" href="/courseinfo">
+              <a className="color-pure" href="/studentcoursedetails">
                 View
               </a>
             </h2>

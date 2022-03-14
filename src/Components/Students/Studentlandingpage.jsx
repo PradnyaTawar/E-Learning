@@ -4,6 +4,8 @@ import img2 from "../Assets/teacher.jpg";
 import StudentCourses from "../Containers/Student-courses.jsx";
 import Courselistcard from "../Containers/course-list.jsx";
 import NavbarTeacher from "../Containers/Navbar-teacher.jsx";
+import Courseinfo from "../Containers/Course-info.jsx";
+import Footercontainer from "../Containers/footer.jsx"
 
 const Studentlandingpage = () => {
   return (
@@ -59,12 +61,13 @@ const Studentlandingpage = () => {
         </div>
       </div>
       <div className="student-list">
-        <Courselistcard /> <Courselistcard />
-        <Courselistcard />
-        <Courselistcard />
-        <Courselistcard />
-        <Courselistcard />
+        <Courseinfo />
+        <Courseinfo />
+        <Courseinfo />
+        <Courseinfo />
       </div>
+      < Footercontainer />
+
     </div>
   );
 };

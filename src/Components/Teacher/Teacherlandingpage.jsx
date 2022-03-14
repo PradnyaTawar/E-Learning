@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../Containers/Navbar-student.jsx";
 import img2 from "../Assets/class.jpg";
-import StudentCourses from "../Containers/Student-courses.jsx";
+import Courseinfo from "../Containers/Course-info.jsx";
+import Footercontainer from "../Containers/footer.jsx"
 
 const Teacherlandingpage = () => {
   return (
@@ -57,11 +58,10 @@ const Teacherlandingpage = () => {
         </div>
       </div>
       <div className="student-list">
-        <StudentCourses />
-        <StudentCourses />
-        <StudentCourses />
-        <StudentCourses /> <StudentCourses /> <StudentCourses />
+        <Courseinfo /> <Courseinfo /> <Courseinfo /> <Courseinfo />{" "}
+        <Courseinfo /> <Courseinfo />
       </div>
+      < Footercontainer />
     </div>
   );
 };
