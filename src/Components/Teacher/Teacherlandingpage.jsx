@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Containers/Navbar-student.jsx";
+import NavbarTeacher from "../Containers/Navbar-teacher.jsx";
 import img2 from "../Assets/class.jpg";
 import Courseinfo from "../Containers/Course-info.jsx";
 import Footercontainer from "../Containers/footer.jsx"
@@ -7,7 +7,7 @@ import Footercontainer from "../Containers/footer.jsx"
 const Teacherlandingpage = () => {
   return (
     <div>
-      <Navbar />
+      <NavbarTeacher />
       <div className="home">
         <div className="home-form">
           <div className="home-div">

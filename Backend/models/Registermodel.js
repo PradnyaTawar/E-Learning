@@ -6,25 +6,25 @@ const registerTemplate = new mongoose.Schema({
         required:true
     },
    
-    Full_Name:{
-        type: Date,
-        default:Date.now   
+    fullname:{
+        type:String,
+        required:true  
     },
-    Username:{
-        type: Date,
-        default:Date.now   
+    username:{
+        type:String,
+        required:true   
     },
-    Contact:{
-        type: Date,
-        default:Date.now   
+    contact:{
+        type:String,
+        required:true
     },
-    Password:{
-        type: Date,
-        default:Date.now   
+    password:{
+        type:String,
+        required:true
     },
-    Confirm_Password:{
-        type: Date,
-        default:Date.now   
+    confirmPassword:{
+        type:String,
+        required:true
     },
 })
 

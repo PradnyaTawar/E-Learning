@@ -24,7 +24,7 @@ const teasidebarNavItems = [
   {
     display: "Create Course",
     icon: <CreateLogo color="#fff" />,
-    to: "/create",
+    to: "/createcourse",
     section: "",
   },
 

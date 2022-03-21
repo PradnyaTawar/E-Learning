@@ -4,7 +4,7 @@ import TeacherSidebar from "../Teacher/TeacherSidebar";
 
 const TAppLayout = () => {
     return <div style={{
-        padding: '5px 0px 0px 320px'
+        padding: '3px 0px 0px 280px'
     }}>
        <TeacherSidebar/>
         <Outlet />

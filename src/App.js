@@ -2,8 +2,10 @@ import "./App.css";
 // import Navbar from './Components/Navbar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./Components/pages/Homepage";
-import Signin from "./Components/Teacher/Signin";
-import Signup from "./Components/Teacher/Signup";
+import Signin from "./Components/Students/Signin";
+import Signup from "./Components/Students/Signup";
+import TeacherSignin from "./Components/Teacher/TeacherSignin";
+import TeacherSignup from "./Components/Teacher/TeacherSignup";
 import Home from "./Components/Home/Home";
 // import Teachersidebar from "./Components/Teacher/TeacherSidebar";
 import Createcourse from "./Components/Teacher/Createcourse";
@@ -55,10 +57,14 @@ const App = () => {
               index
               element={<TeacherProfile />}
             />
-            <Route exact path="/create" element={<Createcourse />} />
+            <Route exact path="/createcourse" element={<Createcourse />} />
             <Route exact path="/studentslist" element={<Studentslist />} />
             <Route exact path="/addedcourses" element={<Addedcourses />} />
-            <Route exact path="/studentcoursedetail" element={<CourseDetails />} />
+            <Route
+              exact
+              path="/studentcoursedetail"
+              element={<CourseDetails />}
+            />
             {/* <Route
               exact
               path="/studentcoursedetails"
@@ -72,7 +78,7 @@ const App = () => {
             path="/teacherlandingpage"
             element={<Teacherlandingpage />}
           />
-  <Route exact path="/coursedetail" element={<CourseDetails />}></Route>
+          <Route exact path="/coursedetail" element={<CourseDetails />}></Route>
           <Route
             exact
             path="/studentlandingpage"
@@ -82,6 +88,16 @@ const App = () => {
           <Route exact path="/home" element={<Home />}></Route>
           <Route exact path="/signin" element={<Signin />}></Route>
           <Route exact path="/signup" element={<Signup />}></Route>
+          <Route
+            exact
+            path="/Teachersignin"
+            element={<TeacherSignin />}
+          ></Route>
+          <Route
+            exact
+            path="/Teachersignup"
+            element={<TeacherSignup />}
+          ></Route>
           <Route path="/teacherprofile" element={<TeacherProfile />}></Route>
           <Route exact path="/create" element={<Createcourse />}></Route>
           <Route exact path="/studentslist" element={<Studentslist />}></Route>
@@ -90,11 +106,7 @@ const App = () => {
             path="/studentdashboard"
             element={<Studentsidebar />}
           ></Route>
-          <Route
-            exact
-            path="/courseinfo"
-            element={<Courseinfo />}
-          ></Route>
+          <Route exact path="/courseinfo" element={<Courseinfo />}></Route>
           <Route path="/courses" index element={<Courses />}></Route>
           <Route path="/createnotes" element={<Notes />}></Route>
 

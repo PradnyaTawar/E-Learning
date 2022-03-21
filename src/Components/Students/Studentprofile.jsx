@@ -1,12 +1,15 @@
-import React from "react";
 import Titlecontainer from "../Containers/title-container.jsx";
 import img2 from "../Assets/image 1.svg";
-
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 const Studentprofile = () => {
+  
+  
   return (
     <div>
       <Titlecontainer title="Student Details" />
       <div className="signin">
+      {/* {console.log("User",  user)} */}
         <div className="signin-img">
           <img className="img" alt="img" height="500" width="500" src={img2} />
         </div>
@@ -15,6 +18,7 @@ const Studentprofile = () => {
             <label class="input-label h-20-semi color-primary  ">
               {" "}
               Username
+           
             </label>
             <label class="input-label h-30-semi  "> Username</label>
           </div>

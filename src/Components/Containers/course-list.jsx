@@ -3,6 +3,7 @@ import ListLogo from "../Assets/jsx_svg/list-logo";
 import Profillogo from "../Assets/jsx_svg/profilelogo";
 
 const Courselistcard = ({ name }) => {
+  
   return (
     <div className="student-list-card just-center  ">
       <div className="just-center ">

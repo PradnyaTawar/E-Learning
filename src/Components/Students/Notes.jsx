@@ -16,7 +16,7 @@ export default class Notes extends React.Component {
 
   onSubmit = async () => {
     alert(this.state.note_name);
-    const result = await axios.post(`http://localhost:4000/app/signup`, {
+    const result = await axios.post(`http://localhost:4000/createnotes`, {
       note: this.state.note_name,
     });
     console.log(result);
@@ -27,7 +27,7 @@ export default class Notes extends React.Component {
 
   getData = async () => {
     try {
-      const data = await axios.get("http://localhost:4000/app/get-all-data");
+      const data = await axios.get("http://localhost:4000/get-all-data");
       console.log(data.data);
       this.setState({
         data: data.data,
@@ -86,7 +86,7 @@ export class NoteRowContainer extends React.Component {
   onDelete = async (del) => {
     alert(del);
     const result = await axios.post(
-      `http://localhost:4000/app/delete-data/${del}`
+      `http://localhost:4000/delete-data/${del}`
     );
     console.log(result);
   };
@@ -97,7 +97,7 @@ export class NoteRowContainer extends React.Component {
       note:this.state.updatednote_name
     }
     const result = await axios.post(
-      `http://localhost:4000/app/update-mail/${newNote}`,
+      `http://localhost:4000/update-mail/${newNote}`,
       data
     );
     console.log(result);

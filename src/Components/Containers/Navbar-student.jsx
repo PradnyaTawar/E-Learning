@@ -2,7 +2,7 @@ import React from "react";
 
 import img2 from "../Assets/Frame.svg";
 
-const Navbar = () => {
+const NavbarStudent = () => {
   return (
     <div>
       <div className="navbar d-flex-ac">
@@ -36,4 +36,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarStudent;

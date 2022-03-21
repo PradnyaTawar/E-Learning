@@ -3,14 +3,14 @@ import Navbar from "../Containers/Navbar-student.jsx";
 import img2 from "../Assets/teacher.jpg";
 import StudentCourses from "../Containers/Student-courses.jsx";
 import Courselistcard from "../Containers/course-list.jsx";
-import NavbarTeacher from "../Containers/Navbar-teacher.jsx";
+import NavbarStudent from "../Containers/Navbar-student.jsx";
 import Courseinfo from "../Containers/Course-info.jsx";
 import Footercontainer from "../Containers/footer.jsx"
 
 const Studentlandingpage = () => {
   return (
     <div>
-      <NavbarTeacher />
+      <NavbarStudent />
       <div className="home">
         <div className="home-form">
           <div className="home-div">
