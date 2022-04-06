@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState ,Component} from "react";
 import TeacherSidebar from "./TeacherSidebar";
 import Titlecontainer from "../Containers/title-container.jsx";
 import img2 from "../Assets/class1.jpg";
@@ -9,16 +9,54 @@ import Arrow from "../Assets/jsx_svg/arrow-logo";
 import Biggner from "../Assets/jsx_svg/biggner-logo";
 import Homework from "../Assets/jsx_svg/homework-logo";
 import Askquestion from "../Containers/askquestion.jsx";
-
+import axios from "axios";
 import CreateLogo from "../Assets/jsx_svg/create-course";
 
-const CourseDetails = () => {
-  return (
+export default class CourseDetails extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+      coursename: "",
+      links: "",
+      skills: "",
+      thumbnail: "",
+    };
+  }
+  getData = async (coursename) => {
+    try {
+      const data = await axios.get(
+        `http://localhost:4000/get-courses/${coursename}`
+      );
+      console.log(data.data);
+      this.setState({
+        data: data.data,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+    this.setState({
+      coursename: "",
+      links: "",
+      skills: "",
+      thumbnail: "",
+    });
+  };
+  componentDidMount() {
+    console.log();
+    this.getData(window.location.search.split("?")[1]);
+  }
+  render() {
+    return (
     <div>
       <Titlecontainer title="Course Details" />
       <div className="signin">
+        {/* {console.log("User", user)} */}
         <div className="sign-in-form">
           <div className="input-div">
+            <label class="input-label h-30-semi color-primary  ">
+            {this.state.data.coursename}
+            </label>
             <label class="input-label h-30-semi color-primary  ">
               {" "}
               About this course
@@ -107,31 +145,23 @@ const CourseDetails = () => {
         </label>
         <div className=" skills-container d-flex  h-20-semi color-primary">
           <div className=" input-text-box-white">
-            <div className="text-center h-20-regular">
-              React React React React React
-            </div>
+            <div className="text-center h-20-regular">{this.state.data.skills}</div>
           </div>
           <div className=" input-text-box-white">
-            <div className="text-center h-20-regular">React React React</div>
+            <div className="text-center h-20-regular">{this.state.data.skills}</div>
           </div>
           <div className=" input-text-box-white">
-            <div className="text-center h-20-regular">
-              React React React React React React React React
-            </div>
+            <div className="text-center h-20-regular">{this.state.data.skills}</div>
           </div>
         </div>
         <div className="skills-container d-flex-ac  h-20-semi color-primary">
           <div className=" input-text-box-white">
-            <div className="text-center h-20-regular">
-              React React React React
-            </div>
+            <div className="text-center h-20-regular">{this.state.data.links}</div>
           </div>
           <div className=" input-text-box-white">
-            <div className="text-center h-20-regular">React React React</div>
+            <div className="text-center h-20-regular">{this.state.data.links}</div>
           </div>
-          <div className=" input-text-box-white">
-            <div className="text-center h-20-regular">React React</div>
-          </div>
+         
         </div>
       </div>
       <Askquestion />
@@ -150,4 +180,4 @@ const CourseDetails = () => {
   );
 };
 
-export default CourseDetails;
+}

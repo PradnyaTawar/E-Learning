@@ -38,7 +38,6 @@ const Createcourse = () => {
   }
 }
 
- 
   return (
     <div>
       {/* <TeacherSidebar/> */}

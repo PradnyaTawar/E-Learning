@@ -29,94 +29,48 @@ import Courseinfo from "./Components/pages/Courseinfo";
 const App = () => {
   return (
     <div>
-      {/* <Homepage /> */}
-      {/* <Teachersidebar /> */}
+      
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Homepage />}></Route>
-          <Route path="/" element={<AppLayout />}>
-            <Route
-              exact
-              path="/studentprofile"
-              index
-              element={<Studentprofile />}
-            />
+             <Route exact path="/" element={<Homepage />}></Route>
+      <Route path="/" element={<AppLayout />}>
+            <Route exact path="/studentprofile" index element={<Studentprofile />} />
             <Route path="/courses" index element={<Courses />} />
             <Route exact path="/createnotes" element={<Notes />} />
             <Route exact path="/coursedetails" element={<CourseDetails />} />
-            <Route
-              exact
-              path="/studentcoursedetails"
-              element={<Studentcoursedetail />}
-            />
-          </Route>
-          <Route path="/" element={<TAppLayout />}>
-            <Route
-              exact
-              path="/teacherprofile"
-              index
-              element={<TeacherProfile />}
-            />
+            <Route exact path="/studentcoursedetails" element={<Studentcoursedetail />} /> </Route>
+      <Route path="/" element={<TAppLayout />}>
+            <Route exact path="/teacherprofile" index element={<TeacherProfile />}/>
             <Route exact path="/createcourse" element={<Createcourse />} />
             <Route exact path="/studentslist" element={<Studentslist />} />
             <Route exact path="/addedcourses" element={<Addedcourses />} />
-            <Route
-              exact
-              path="/studentcoursedetail"
-              element={<CourseDetails />}
-            />
+            <Route exact path="/studentcoursedetail" element={<CourseDetails />}/>
             {/* <Route
               exact
               path="/studentcoursedetails"
               element={<Studentcoursedetail />}
             /> */}
-            <Route exact path="/viewstudent" element={<Viewstudent />} />
-          </Route>
+          <Route exact path="/viewstudent" element={<Viewstudent />} />  </Route>
           <Route exact path="/teacherdashboard" element={<TeacherSidebar />} />
-          <Route
-            exact
-            path="/teacherlandingpage"
-            element={<Teacherlandingpage />}
-          />
+          <Route exact  path="/teacherlandingpage"  element={<Teacherlandingpage />} />
           <Route exact path="/coursedetail" element={<CourseDetails />}></Route>
-          <Route
-            exact
-            path="/studentlandingpage"
-            element={<Studentlandingpage />}
-          ></Route>
-
+          <Route  exact  path="/studentlandingpage"  element={<Studentlandingpage />}  ></Route>
           <Route exact path="/home" element={<Home />}></Route>
           <Route exact path="/signin" element={<Signin />}></Route>
           <Route exact path="/signup" element={<Signup />}></Route>
-          <Route
-            exact
-            path="/Teachersignin"
-            element={<TeacherSignin />}
-          ></Route>
-          <Route
-            exact
-            path="/Teachersignup"
-            element={<TeacherSignup />}
-          ></Route>
+          <Route exact path="/Teachersignin"  element={<TeacherSignin />}  ></Route>
+          <Route exact  path="/Teachersignup"  element={<TeacherSignup />}  ></Route>
           <Route path="/teacherprofile" element={<TeacherProfile />}></Route>
           <Route exact path="/create" element={<Createcourse />}></Route>
           <Route exact path="/studentslist" element={<Studentslist />}></Route>
-          <Route
-            exact
-            path="/studentdashboard"
-            element={<Studentsidebar />}
-          ></Route>
+          <Route exact path="/studentdashboard" element={<Studentsidebar />}  ></Route>
           <Route exact path="/courseinfo" element={<Courseinfo />}></Route>
           <Route path="/courses" index element={<Courses />}></Route>
           <Route path="/createnotes" element={<Notes />}></Route>
-
+          <Route exact path="/teacherlandingpages"  element={<Teacherlandingpage />} ></Route>
           <Route exact path="/addedcourses" element={<Addedcourses />}></Route>
           <Route exact path="/viewstudent" element={<Viewstudent />}></Route>
-          <Route
-            exact
-            path="/coursedetails"
-            element={<CourseDetails />}
-          ></Route>
+          <Route  exact path="/coursedetails"  element={<CourseDetails />}  ></Route>
         </Routes>
       </BrowserRouter>
     </div>

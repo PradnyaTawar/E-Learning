@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import img2 from "../Assets/Frame.svg";
 
 const NavbarTeacher = () => {
@@ -16,9 +16,10 @@ const NavbarTeacher = () => {
         </div>
         <div className="d-flex-ac ">
           <h1 className="color-pure h-20-bold padding-right">
-            <a className="color-pure" href="/teacherdashboard">
+            <a className="color-pure" href="/teacherprofile">
               Profile
             </a>
+              {/* <Link to={{pathname: '/studentprofile', search: item.id}}> Profile</Link> */}
           </h1>
           <div className="login-btn-div ">
             <button

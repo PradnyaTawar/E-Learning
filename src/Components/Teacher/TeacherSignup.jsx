@@ -3,7 +3,7 @@ import img2 from "../Assets/landing-page.jpg";
 import Navbar from "../Navbar";
 import axios from "axios";
 
-export default class Signup extends Component {
+export default class TeacherSignup extends Component {
 
   constructor(props) {
     super(props);
@@ -17,18 +17,32 @@ export default class Signup extends Component {
   }
 
   onSubmit = async () => {
-    alert("register");
+    if( this.state.password ===  this.state.confirmPassword){
+      alert("register done");
+    }else{
+      return alert("password did not match");
+    }
     const result = await axios.post(`http://localhost:4000/Teachersignup`,{
-      fullName: this.state.fullname,
+      fullname: this.state.fullname,
       username: this.state.username,
       contact: this.state.contact,
       password: this.state.password,
       confirmPassword: this.state.confirmPassword
     });
-    console.log(result);if(result.status == 208){
-      this.getData();
-    }
-  }
+    console.log(result);
+    if(result.status === 200){
+      alert("You can Login now");
+ 
+    }else{
+      alert("failed")
+  } this.setState({
+    fullname: "",
+    username: "",
+    contact: "",
+    password: "",
+    confirmPassword: "",
+  });
+};
 render() {
   return (
     <div>
@@ -44,8 +58,8 @@ render() {
             <input
               type="text"
               className="input-text-box color-primary h-20-bold "
-              value={this.state.fullName}
-              onChange={(e) => this.setState({fullName: e.target.value})}
+              value={this.state.fullname}
+              onChange={(e) => this.setState({fullname: e.target.value})}
             ></input>
           </div>
 
@@ -70,7 +84,7 @@ render() {
           <div className="input-div">
             <label class="input-label h-20-semi  "> Password</label>
             <input
-              type="text"
+              type="password"
               className="input-text-box  color-primary h-20-bold"
               value={this.state.password}
               onChange={(e) => this.setState({password: e.target.value})}
@@ -79,7 +93,7 @@ render() {
           <div className="input-div">
             <label class="input-label h-20-semi  ">Confirm Password</label>
             <input
-              type="text"
+              type="password"
               className="input-text-box  color-primary h-20-bold"
               value={this.state.confirmPassword}
               onChange={(e) => this.setState({confirmPassword: e.target.value})}
@@ -100,7 +114,7 @@ render() {
           </div>
           <div className="heading h-20-semi color-primary ">
             {" "}
-            Already User, Lets <a href="/signin">Sign In</a> !
+            Already User, Lets <a href="/Teachersignin">Sign In</a> !
           </div>
         </div>
       </div>

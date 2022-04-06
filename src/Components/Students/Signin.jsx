@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import img2 from "../Assets/teacher.jpg";
+import img2 from "../Assets/class.jpg";
 import Navbar from "../Navbar";
 import axios from "axios";
 import {useNavigate} from "react-router-dom"
 
 const Signin = () => {
+  
   const [user, setUser] = useState({
     username: "",
     password: "" 
@@ -31,7 +32,7 @@ const Signin = () => {
         redirect  ("/studentlandingpage")    
     // alert("Success")
     }else{
-      alert("failed")
+      alert("Wrong credentials")
   }
 }
 
@@ -62,7 +63,7 @@ const Signin = () => {
           <div className="input-div">
             <label class="input-label h-20-semi  "> Password</label>
             <input
-              type="text"
+              type="password"
               className="input-text-box  color-primary h-20-bold"
               name="password"
               value={user.password}
@@ -84,7 +85,11 @@ const Signin = () => {
           </div>
           <div className="heading h-20-semi color-primary ">
             {" "}
-            New User, Lets <a href="/signup ">Sign Up</a> !
+            New Student, Lets <a href="/signup ">Sign Up</a> !
+          </div>
+          <div className="heading h-20-semi color-primary ">
+            {" "}
+            If You are a Teacher <a href="/Teachersignin ">Sign In</a> !
           </div>
         </div>
       </div>

@@ -11,9 +11,7 @@ const Courses = () => {
       <Titlecontainer title="Courses" />
       <div className="student-list">
         <StudentCourses />
-        <StudentCourses />
-        <StudentCourses />
-        <StudentCourses /> <StudentCourses /> <StudentCourses />
+        
       </div>
     </div>
   );

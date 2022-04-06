@@ -28,7 +28,7 @@ Pune, India</p>
           <div className="navbar-logo d-flex-ac  ">
             <img className="img" alt="img" width="30" src={img3} />
             <h1 className="color-pure h-20-bold">
-              <a className="color-pure" href="/">
+              <a className="color-pure" href="/studentlandingpage">
                 E-Learning
               </a>
             </h1>

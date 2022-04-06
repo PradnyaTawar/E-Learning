@@ -3,6 +3,7 @@ const router = express.Router();
 const registerTemplateCopy = require("../models/registermodel");
 const signUpTemplateCopy = require("../models/SignUpModels");
 const courseTemplateCopy = require("../models/CourseModel");
+const TeacherTemplateCopy = require("../models/TeacherRegister");
 
 const randomstring = require("randomstring");
 router.get('/',(req,res)=>{
@@ -80,10 +81,12 @@ router.get("/get-profile/:username", async (req, res) => {
   }
 });
 
-router.get("/get-profile", async (req, res) => {
+router.get("/get-data:id", async (req, res) => {
   try {
     await registerTemplateCopy
-      .find()
+    .findOne({
+      id: req.params.id,
+    })
       .then((data) => {
         res.json(data);
       })
@@ -92,13 +95,59 @@ router.get("/get-profile", async (req, res) => {
     console.log(err);
   }
 });
-router.post("/Teachersignin", async (request, response) => {
+router.get("/get-all-profile", async (req, res) => {
+  try {
+    await registerTemplateCopy
+    .find()
+    
+      .then((data) => {
+        res.json(data);
+      })
+      .catch((err) => res.json(err));
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+// router.get("/get-profile/:id", async (req, res) => {
+//   try {
+//     await registerTemplateCopy
+//       .findOne({
+//         id: req.params.id,
+//       })
+//       .then((data) => {
+//         res.json(data);
+//       })
+//       .catch((err) => res.json(err));
+//   } catch (err) {
+//     console.log(err);
+//   }
+// });
+
+router.get("/get-course/:note", async (req, res) => {
+  try {
+    await registerTemplateCopy
+      .findOne({
+        note: req.params.note,
+      })
+      .then((data) => {
+        res.json(data);
+      })
+      .catch((err) => res.json(err));
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+
+
+router.post("/Teachersignup", async (request, response) => {
   const id = randomstring.generate({
     length: 12,
     charset: "hex",
   });
   try {
-    const registration = new registerTemplateCopy({
+    const registers = new TeacherTemplateCopy({
       id: id,
       fullname: request.body.fullname,
       username: request.body.username,
@@ -106,7 +155,7 @@ router.post("/Teachersignin", async (request, response) => {
       password: request.body.password,
       confirmPassword: request.body.confirmPassword,
     });
-    registration
+    registers
       .save()
       .then((data) => {
         response.sendStatus(200);
@@ -122,7 +171,7 @@ router.post("/Teachersignin", async (request, response) => {
 });
 router.get("/Teachersignin/:username/:password", async (req, res) => {
   try {
-    const data = await registerTemplateCopy
+    const data = await TeacherTemplateCopy
       .findOne({
        username: req.params.username,
       });
@@ -147,6 +196,21 @@ router.get("/Teachersignin/:username/:password", async (req, res) => {
     console.log(err);
   }
 });
+
+router.get("/get-Teacher-profile/:id", async (req, res) => {
+  try {
+    await TeacherTemplateCopy
+      .findOne({
+       id: req.params.id,
+      }).then((data) => {console.log(data);
+        res.json(data);
+      })
+      .catch((err) => res.json(err));;
+  } catch (err) {
+    console.log(err);
+  }
+});
+
 //notes
 router.post("/createnotes", async (request, response) => {
   console.log(request.body);
@@ -168,22 +232,6 @@ router.post("/createnotes", async (request, response) => {
   }
 });
 
-router.get("/get-data/:note", async (req, res) => {
-  try {
-    await registerTemplateCopy
-      .findOne({
-        note: req.params.note,
-      })
-      .then((data) => {
-        res.json(data);
-      })
-      .catch((err) => res.json(err));
-  } catch (err) {
-    console.log(err);
-  }
-});
-
-
 router.get("/get-all-data", async (req, res) => {
   try {
     await signUpTemplateCopy
@@ -196,7 +244,6 @@ router.get("/get-all-data", async (req, res) => {
     console.log(err);
   }
 });
-
 router.post("/update-mail/:note", async (req, res) => {
   try {
     const data = await signUpTemplateCopy.findOneAndUpdate(
@@ -233,6 +280,23 @@ router.post("/delete-data/:note", async (req, res) => {
     res.sendStatus(404);
   }
 });
+router.get("/get-data/:note", async (req, res) => {
+  try {
+    await registerTemplateCopy
+      .findOne({
+        note: req.params.note,
+      })
+      .then((data) => {
+        res.json(data);
+      })
+      .catch((err) => res.json(err));
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+
+
 
 router.post("/createcourse", async (request, response) => {
   const id = randomstring.generate({
@@ -264,11 +328,12 @@ router.post("/createcourse", async (request, response) => {
   }
 });
 
-router.get("/get-course/:note", async (req, res) => {
+router.get("/get-courses/:coursename", async (req, res) => {
+  
   try {
-    await registerTemplateCopy
+    await courseTemplateCopy
       .findOne({
-        note: req.params.note,
+        coursename: req.params.coursename,
       })
       .then((data) => {
         res.json(data);
@@ -278,5 +343,36 @@ router.get("/get-course/:note", async (req, res) => {
     console.log(err);
   }
 });
-// router.get('/signin')
+
+router.get("/get-course/:id", async (req, res) => {
+  
+  try {
+    await courseTemplateCopy
+      .findOne({
+        id: req.params.id,
+      })
+      .then((data) => {
+        res.json(data);
+      })
+      .catch((err) => res.json(err));
+  } catch (err) {
+    console.log(err);
+  }
+});
+router.get("/get-all-courses", async (req, res) => {
+  try {
+    await courseTemplateCopy
+      .find()
+      .then((data) => {
+        res.json(data);
+      })
+      .catch((err) => res.json(err));
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+
+
+
 module.exports = router;

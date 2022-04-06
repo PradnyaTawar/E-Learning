@@ -28,10 +28,10 @@ const TeacherSignin = () => {
     console.log(data.data)
     
     if (data.data.status === 200) {
-        redirect  ("/studentlandingpage")    
+        redirect  ("/teacherlandingpages")    
     // alert("Success")
     }else{
-      alert("failed")
+      alert("Wrong credentials")
   }
 }
   return (
@@ -58,7 +58,7 @@ const TeacherSignin = () => {
           <div className="input-div">
             <label class="input-label h-20-semi  "> Password</label>
             <input
-              type="text"
+              type="password"
               className="input-text-box  color-primary h-20-bold"
               name="password"
               value={user.password}
@@ -79,7 +79,11 @@ const TeacherSignin = () => {
           </div>
           <div className="heading h-20-semi color-primary ">
             {" "}
-            New User, Lets <a href="/signup ">Sign Un</a> !
+            New Teacher, Lets <a href="/Teachersignup ">Sign Up</a> !
+          </div>
+          <div className="heading h-20-semi color-primary ">
+            {" "}
+            If You are a Student <a href="/signin ">Sign In</a> !
           </div>
         </div>
       </div>

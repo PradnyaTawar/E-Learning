@@ -16,16 +16,23 @@ export default class Signup extends Component {
     };
   }
   onSubmit = async () => {
+    if( this.state.password ===  this.state.confirmPassword){
+      alert("register done");
+    }else{
+      return alert("password did not match");
+    }
     const result = await axios.post(`http://localhost:4000/signup`, {
       fullname: this.state.fullname,
       username: this.state.username,
       contact: this.state.contact,
+
       password: this.state.password,
       confirmPassword: this.state.confirmPassword,
     });
+
     console.log(result);
     if (result.status === 200) {
-      alert("register done You can Login now");
+      alert(" You can Login now");
  
   }else{
     alert("failed")
@@ -78,7 +85,7 @@ export default class Signup extends Component {
             <div className="input-div">
               <label className="input-label h-20-semi  "> Password</label>
               <input
-                type="text"
+                type="password"
                 className="input-text-box  color-primary h-20-bold"
                 value={this.state.password}
                 onChange={(e) => this.setState({ password: e.target.value })}
@@ -89,7 +96,7 @@ export default class Signup extends Component {
                 Confirm Password
               </label>
               <input
-                type="text"
+                type="password"
                 className="input-text-box  color-primary h-20-bold"
                 value={this.state.confirmPassword}
                 onChange={(e) =>
@@ -111,7 +118,7 @@ export default class Signup extends Component {
             </div>
             <div className="heading h-20-semi color-primary ">
               {" "}
-              Already User, Lets <a href="/signin">Sign In</a> !
+              Already Enrolled, Lets <a href="/signin">Sign In</a> !
             </div>
           </div>
         </div>

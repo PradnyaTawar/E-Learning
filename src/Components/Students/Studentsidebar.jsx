@@ -66,7 +66,7 @@ const Studentsidebar = () => {
         <div className="sidebar-logo d-flex-ac just-center padding ">
           <img className="img" alt="img" width="30" src={img2} />
           <h1 className="color-pure  just-center h-20-bold">
-            <a className="color-pure just-center" href="/teacherlandingpage">
+            <a className="color-pure just-center" href="/studentlandingpage">
               E-Learning
             </a>
           </h1>

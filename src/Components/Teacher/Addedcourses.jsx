@@ -9,7 +9,7 @@ const Addedcourses = () => {
       <Titlecontainer title="Added Courses" />
       <div className="student-list">
         <Courselistcard />
-        <Courselistcard />
+     
       </div>
     </div>
   );

@@ -65,9 +65,9 @@ html {
   display: flex;
   flex-direction: column;
   width: 70%;
-  border-radius:1rem;
+  border-radius:0rem;
   justify-content: space-between;
-  background-color: #d1b9f1;
+  background-color: #e1d4f1;
 
   & .table{
       display: flex;
@@ -87,23 +87,23 @@ html {
 
       }
       & .btns {
-          background-color: blue;
+          background-color: #a055ff;
           color: white;
           font-size: 1.5rem;
           padding: 1rem;
           margin: 0 0.5rem;
           border-radius: 1rem;
-          border: 2px solid transparent;
+          border: 1px solid transparent;
           width: 10rem;
           cursor: pointer;
           
       }
       & .btns:hover{
-      background-color: rgb(87, 87, 255);
+      background-color: rgb(172, 172, 233);
 
       }
       & .btnss {
-          background-color: rgb(219, 34, 34);
+          background-color: rgb(241, 79, 79);
           color: white;
           font-size: 1.5rem;
           padding: 1rem;
@@ -115,7 +115,7 @@ html {
           
       }
       & .btnss:hover{
-      background-color: rgb(241, 87, 87);
+      background-color: rgb(231, 169, 169);
 
       }
   }
